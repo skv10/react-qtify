@@ -55,6 +55,7 @@ function AlbumList(){
           data={songs}
           filterSource={fetchFilters}
           type="song"
+          hide={true}
         />
       </div>
         </>

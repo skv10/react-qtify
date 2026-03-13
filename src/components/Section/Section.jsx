@@ -6,7 +6,7 @@ import Carousel from "../Carousel/Carousel";
 import Filters from "../Filters/Filters";
 import styles from "./Section.module.css";
 
-export default function Section({ title, data, filterSource, type }) {
+export default function Section({ title, data, filterSource, type, hide=false }) {
   const [filters, setFilters] = useState([{ key: "all", label: "All" }]);
   const [selectedFilterIndex, setSelectedFilterIndex] = useState(0);
   const [carouselToggle, setCarouselToggle] = useState(true);
@@ -35,9 +35,10 @@ export default function Section({ title, data, filterSource, type }) {
     <div>
       <div className={styles.header}>
         <h3>{title}</h3>
+        {!hide &&
         <h4 className={styles.toggleText} onClick={handleToggle}>
           {!carouselToggle ? "Collapse All" : "Show All"}
-        </h4>
+        </h4>}
       </div>
       {showFilters && (
         <div className={styles.filterWrapper}>
