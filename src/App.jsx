@@ -8,10 +8,6 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 function App() {
 
   return (
-    // <>
-    //   <Navbar />
-    //   <Hero />
-    // </>
     <Routes>
       <Route
         path="/"
