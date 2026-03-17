@@ -56,7 +56,6 @@ function Search({ searchData, placeholder }) {
     e.preventDefault();
     console.log(value);
     navigate(`/album/${value.slug}`);
-    //Process form data, call API, set state etc.
   };
 
   return (
